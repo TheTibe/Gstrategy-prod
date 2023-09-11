@@ -1,0 +1,19 @@
+<div class="ui segment">
+    <h2 class="ui header">NFT Prizes</h2>
+    <div class="ui stackable four cards">
+      <div class="ui card" *ngFor="let nft of nftPrizes">
+        <div class="image">
+          <img [src]="nft.image" alt="{{ nft.name }} Image">
+        </div>
+        <div class="content">
+          <div class="header">{{ nft.name }}</div>
+          <div class="description">{{ nft.description }}</div>
+        </div>
+        <div class="extra content">
+          <span class="right floated">{{ nft.prize }}</span>
+          <span><i class="gem icon"></i> Collectible</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,13 @@
+<div class="ui segment">
+    <h2 class="ui header">Available Tasks</h2>
+    <ul class="ui list">
+      <li class="item" *ngFor="let task of tasks">
+        <h3 class="header">{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+        <p>Reward: <span class="ui label">$ {{ task.reward }}</span></p>
+        <p>Level Required: <span class="ui label">{{ task.level }}</span></p>
+        <button class="ui primary button" (click)="completeTask(task)">Complete Task</button>
+      </li>
+    </ul>
+  </div>
+  

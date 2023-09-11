@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { background-color: #606060; margin: 0;padding: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import "semantic-ui-css/semantic.css";
+
+.user-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-card h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .user-card p {
+    margin: 0;
+  }
+  
+  .user-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .user-card li {
+    margin: 5px 0;
+  }
+  

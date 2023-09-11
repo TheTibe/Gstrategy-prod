@@ -1,0 +1,13 @@
+<div class="user-card">
+    <h3>{{ user.username }}</h3>
+    <p>Balance: ${{ user.balance }}</p>
+    <div *ngIf="user.referrals.length > 0">
+      <p>Referrals:</p>
+      <ul>
+        <li *ngFor="let referral of user.referrals">
+          {{ referral.username }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  

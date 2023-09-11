@@ -1,0 +1,22 @@
+<div class="ui container">
+    <h1 class="ui header">Dashboard</h1>
+        <app-user-info></app-user-info>
+    
+    <!-- Referrals Component -->
+    <div>
+        <h2>Referrals</h2>
+        <div *ngFor="let user of users">
+          <app-referrals [user]="user"></app-referrals>
+        </div>
+      </div>
+    
+    <!-- Tasks Component -->
+    <app-tasks></app-tasks>
+    
+    <!-- NFT Gifts Component -->
+    <app-nft-gifts></app-nft-gifts>
+    
+    <!-- Gift Boxes Component -->
+    <app-gift-boxes></app-gift-boxes>
+  </div>
+  

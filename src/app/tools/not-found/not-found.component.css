@@ -1,0 +1,30 @@
+/* You can add more styling as needed */
+.ui.container {
+    margin-top: 2em;
+  }
+  
+  .ui.grid {
+    height: 100%;
+  }
+  
+  .column {
+    text-align: center;
+  }
+  
+  .ui.header {
+    font-size: 3rem;
+  }
+  
+  .ui.icon {
+    font-size: 4rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-top: 1em;
+  }
+  
+  .ui.primary.button {
+    margin-top: 1em;
+  }
+  

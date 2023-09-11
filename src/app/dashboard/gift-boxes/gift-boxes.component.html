@@ -1,0 +1,19 @@
+<div class="ui segment">
+    <h2 class="ui header">Gift Boxes</h2>
+    <button class="ui primary button" (click)="openFreeBox()">Open Free Box</button>
+    <br>
+    <br>
+    <div class="ui stackable four cards">
+      <div class="ui card" *ngFor="let box of giftBoxes">
+        <div class="content">
+          <div class="header">{{ box.name }}</div>
+          <div class="meta">{{ box.rarity }}</div>
+          <div class="description">Cost: ${{ box.level }}</div>
+        </div>
+        <div class="extra content">
+          <button class="ui primary button" (click)="openGiftBox(box)">Open</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

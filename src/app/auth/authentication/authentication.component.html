@@ -1,0 +1,123 @@
+<div class="ui containers">
+  <div class="form-container">
+    <h3 class="ui header">
+      {{
+        activeForm === "register"
+          ? "Create an Account"
+          : activeForm === "login"
+          ? "Login"
+          : "Forgot Password"
+      }}
+    </h3>
+
+    <!-- Register Form -->
+    <div *ngIf="activeForm === 'register'" class="ui segment dark">
+      <form class="ui form" [formGroup]="registerForm" (ngSubmit)="register()">
+        <div class="field">
+          <label>Username</label>
+          <input
+            formControlName="username"
+            placeholder="Username"
+            class="dark"
+          />
+        </div>
+        <div class="field">
+          {{ registerForm.get("username")?.errors | json }}
+        </div>
+
+        <div class="field">
+          <label>Password</label>
+          <input
+            formControlName="password"
+            placeholder="Password"
+            type="password"
+            class="dark"
+          />
+        </div>
+        <div class="field">
+          {{ registerForm.get("password")?.errors | json }}
+        </div>
+
+        <div class="field">
+          <label>Email</label>
+          <input formControlName="email" placeholder="Email" class="dark" />
+        </div>
+
+        <div class="field">
+          <label>Phone</label>
+          <input formControlName="phone" placeholder="Phone" class="dark" />
+        </div>
+
+        <div class="field">
+          <label>Referral</label>
+          <input
+            formControlName="referral"
+            placeholder="Referral"
+            class="dark"
+          />
+        </div>
+
+        <button class="ui primary button fluid" type="submit" (click)="register()">Register</button>
+      </form>
+    </div>
+
+    <!-- Login Form -->
+    <div *ngIf="activeForm === 'login'" class="ui segment dark">
+      <form class="ui form" [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="field">
+          <label>Username</label>
+          <input
+            formControlName="username"
+            placeholder="Username"
+            class="dark"
+          />
+        </div>
+
+        <div class="field">
+          <label>Password</label>
+          <input
+            formControlName="password"
+            placeholder="Password"
+            type="password"
+            class="dark"
+          />
+        </div>
+
+        <button class="ui primary button fluid" (click)="login()" type="submit">Login</button>
+      </form>
+    </div>
+
+    <!-- Forgot Password Form -->
+    <div *ngIf="activeForm === 'forgot-password'" class="ui segment dark">
+      <form
+        class="ui form"
+        [formGroup]="forgotPasswordForm"
+        (ngSubmit)="forgotPassword()"
+      >
+        <div class="field">
+          <label>Email</label>
+          <input formControlName="email" placeholder="Email" class="dark" />
+        </div>
+
+        <button class="ui primary button fluid" type="submit">
+          Reset Password
+        </button>
+      </form>
+    </div>
+
+    <div class="ui segment">
+      <button (click)="setActiveForm('register')" class="ui button fluid">
+        Register
+      </button>
+      <button (click)="setActiveForm('login')" class="ui button fluid">
+        Login
+      </button>
+      <button
+        (click)="setActiveForm('forgot-password')"
+        class="ui button fluid"
+      >
+        Forgot Password
+      </button>
+    </div>
+  </div>
+</div>
